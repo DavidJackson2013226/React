@@ -1,0 +1,465 @@
+@import "../../global.scss";
+.table_div {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+
+    .filter_div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+        justify-content: space-between;
+
+        @include mobile_potrait {
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .info_div {
+            display: flex;
+            align-items: center;
+            grid-area: auto;
+            gap: 24px;
+    
+            @include mobile_potrait {
+                flex-direction: column;
+                gap: 16px;
+            }
+    
+            .btn_div {
+                display: flex;
+                align-items: center;
+                grid-area: auto;
+                gap: 8px;
+                display: flex;
+                height: 50px;
+                background-color: #fff;
+                border: 1px solid #ebebeb;
+                border-radius: 6px;
+                padding: 3px 10px;
+    
+                @include mobile_potrait {
+                    width: 100%;
+                    flex-wrap: wrap;
+                    height: auto;
+                    justify-content: space-between;
+                }
+    
+                button {
+                    padding: 6px 16px;
+                    font-size: 14px;
+                    font-weight: 700;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    border: none;
+                    background-color: #ffffff00;
+    
+                    &:hover {
+                        background-color: #eee;
+                    }
+    
+                    img {
+                        height: 24px;
+                        object-fit: cover;
+                    }
+                }
+    
+                .btn {
+                    background-color: #ff00ff33;
+                    border-radius: 8px;
+                }
+    
+                .active {
+                    background-color: #ededed;
+                    color: #787878;
+    
+                }
+    
+                p {
+                    font-size: 16px;
+                    margin-bottom: 0;
+                }
+    
+                input {
+                    width: 80px;
+                    border: 1px solid #ff00ff88;
+                    padding: 8px;
+                    line-height: 1;
+                    font-size: 14px;
+                    border-radius: 8px;
+    
+                    &:focus {
+                        outline: none;
+                    }
+    
+                    @include mobile_potrait {
+                        font-size: 12px;
+                        width: 60px;
+                    }
+                }
+    
+                input[type=number]::-webkit-inner-spin-button,
+                input[type=number]::-webkit-outer-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+            }
+    
+            .stat_div {
+                align-items: center;
+                grid-area: auto;
+                gap: 8px;
+                height: 50px;
+                background-color: #fff;
+                border: 1px solid #ebebeb;
+                border-radius: 6px;
+                padding: 0px 10px;
+    
+                @include mobile_potrait {
+                    width: 100%;
+                    flex-wrap: wrap;
+                    height: auto;
+                    justify-content: space-between;
+                }
+    
+                p {
+                    font-size: 16px;
+                    margin-bottom: 0;
+                    text-align: center;
+                }
+                .stat_attr {
+                    font-weight: bold;
+                }
+            }
+        }
+    
+        .page_div {
+            display: flex;
+            align-items: center;
+            grid-area: auto;
+            gap: 8px;
+            display: flex;
+            height: 50px;
+            background-color: #fff;
+            border: 1px solid #ebebeb;
+            border-radius: 6px;
+            padding: 3px 10px;
+
+            @include mobile_potrait {
+                width: 100%;
+                flex-wrap: wrap;
+                height: auto;
+                justify-content: space-between;
+            }
+
+            button {
+                padding: 6px 16px;
+                font-size: 14px;
+                font-weight: 700;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                border: none;
+                background-color: #ffffff00;
+
+                &:hover {
+                    background-color: #eee;
+                }
+
+                img {
+                    height: 24px;
+                    object-fit: cover;
+                }
+            }
+
+            .btn {
+                background-color: #ff00ff33;
+                border-radius: 8px;
+            }
+
+            .active {
+                background-color: #ededed;
+                color: #787878;
+
+            }
+
+            p {
+                font-size: 16px;
+                margin-bottom: 0;
+            }
+
+            input {
+                width: 80px;
+                border: 1px solid #ff00ff88;
+                padding: 8px;
+                line-height: 1;
+                font-size: 14px;
+                border-radius: 8px;
+
+                &:focus {
+                    outline: none;
+                }
+
+                @include mobile_potrait {
+                    font-size: 12px;
+                    width: 60px;
+                }
+            }
+
+            input[type=number]::-webkit-inner-spin-button,
+            input[type=number]::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        }
+    }
+}
+.mytable{
+    width: 100%;
+    height: auto;
+    max-height: calc(100% - 5rem);
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    
+    background-size: 100% 100%;
+    h3{
+        color: #333 !important;
+        font-size: 24px;
+        font-weight: 600;
+        @media screen and (max-width: 640px) and (orientation:portrait){
+            font-size: 20px;
+        }
+    }
+    @include mobile_potrait{
+    }
+    @include mobile_landscape{
+        padding: 0.5rem;
+    }
+    .bottom{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        border-top: solid 0.5px rgba(0,0,0,0.2);
+        @include mobile_potrait{
+            flex-direction: column;
+
+        }
+        .MuiTablePagination-root{
+            
+            display: flex;
+            align-items: center;
+            @include mobile_potrait{
+                margin-right: 0;
+                margin-left: auto;
+
+            }
+            .MuiToolbar-gutters{
+                p{
+                    font-size: 14px;
+                    margin-bottom: 0rem;
+                    color: #333;
+                    width: auto;
+                    @include mobile_potrait{
+                        font-size: 0.8rem;
+        
+                    }
+                    @include mobile_landscape{
+                        font-size: 0.8rem;
+                    }
+                }
+                svg{
+                    fill: #333;
+                    
+                }
+                div{
+                    margin-left: 0rem;
+                    margin-right: 0.5rem;
+                }
+            }
+            .MuiTablePagination-actions{
+                padding-left: 16px;
+                grid-area: auto;
+                gap : 16px,
+            }
+            .MuiButtonBase-root{
+                background-color: #ffffff88;
+                margin-right: 16px;
+                &:hover{
+                    background-color: #ffffffaa;
+                }
+                @include mobile_potrait{
+                    width: 30px;
+                    height: 30px;
+    
+                }
+            }
+            .MuiTablePagination-selectLabel{
+                @media screen and (max-width: 640px) and (orientation:portrait){
+                    display: none;
+                }
+            }
+            
+        }
+        
+    }
+    .MuiPaper-elevation1{
+        margin-bottom: 0rem;
+
+    }
+    .MuiPaper-root{
+        background-color: rgba(255, 255, 255, 0);
+    }
+    .MuiTableContainer-root{
+        @media screen and (max-width: 640px) and (orientation:portrait){
+        }
+        // .MuiTableCell-body{
+        //     display: flex;
+        //     align-items: center;
+        //     justify-content: center;
+        //     flex-direction: column;
+        // }
+    }
+    
+}
+th {
+    padding: 5px !important;
+    span{
+        color: #000 !important;
+        font-size: 14px;
+        font-weight: 600;
+        @media screen and (max-width: 640px) and (orientation:portrait){
+            font-size: 10px;
+        }
+        svg{
+            fill: #333 !important;
+            display: none !important;
+        }
+    }
+
+}
+thead{
+    th {
+        min-width: 2rem !important;
+        padding: 0.2rem 8px !important;
+        border-color: #ffffff33 !important;
+    }
+}
+tbody{
+    
+    th {
+        min-width: 2rem !important;
+        padding: 0.2rem !important;
+        
+    }
+    td {
+        min-width: 2rem !important;
+        padding: 8px 8px !important;
+        border-color: #ffffff33 !important;
+    }
+}
+
+.myCell{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    grid-area: auto;
+    gap : 16px;
+    
+    .img_div{
+        width: 60px;
+        height: 60px;
+        position: relative;
+        @include mobile_potrait {
+            .video_img_card{
+                width: 60px !important;
+                height: 60px !important;
+            }           
+        }
+        .main_img{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .verify{
+            position: absolute;
+            bottom : 0;
+            right : 0;
+            width: 16px;
+            height: 16px;
+        }
+    }
+    p{
+        margin: 0rem !important;
+        margin-bottom: 0rem !important;
+        margin-right: 0rem !important;        
+        font-size: 16px;
+        font-weight: 600;
+        text-align: end !important;
+        white-space: nowrap;
+        @media screen and (max-width: 640px) and (orientation:portrait){
+        }
+    }
+    
+    span{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        grid-area: auto;
+        gap: 8px;
+        cursor: pointer;
+        .show{
+            color: #eee;
+        }
+    }
+    &.right{
+        justify-content: flex-end;
+    }
+    
+}
+.nft_ids{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    grid-area: auto;
+    gap: 8px;
+    max-width: 360px;
+    margin-right: 0;
+    margin-left: auto;
+    max-height: 150px;
+    overflow-y: scroll;
+    .nft_item{
+        color: #eee;
+        padding: 5px 10px;
+        border: 1px #ffffff33 solid;
+        background-color: #ffffff11;
+        border-radius: 8px;
+        min-width: 82px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.loadingCell{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    height: 3rem;    
+    span {
+        font-size: 20px;
+        color: #f0f !important;
+    }
+}
